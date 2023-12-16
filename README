@@ -1,0 +1,35 @@
+/*
+PARA TRANSFORMAR EM APP:
+precisa ter o git instalado
+npm install --save-dev @electron-forge/cli
+npx electron-forge import
+
+adicionar author e descprition em package.json
+
+npm run make
+
+PARA PUBLICAR:
+npm install --save-dev @electron-forge/publisher-github
+adicionar ao forge.config.js:
+
+////////////////////////////////////////
+module.exports = {
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'github-user-name',
+          name: 'github-repo-name'
+        },
+        prerelease: false,
+        draft: true
+      }
+    }
+  ]
+}
+/////////////////////////////////////////
+
+adicionar "publish": "electron-forge publish" ao package.json
+
+*/
